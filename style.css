@@ -1,0 +1,295 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+:root {
+  --Pale-Blue: hsl(243, 100%, 93%);
+  --Grayish-Blue: hsl(229, 7%, 55%);
+  --Dark-Blue: hsl(228, 56%, 26%);
+  --Very-Dark-Blue: hsl(229, 57%, 11%);
+  --Gradient: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+body {
+  background: url(./images/bg-mobile.png) var(--Very-Dark-Blue) no-repeat;
+  padding: 1rem;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  font-family: "Raleway", sans-serif;
+}
+main {
+  width: min(100%, 47.5rem);
+}
+.c-card-container {
+  width: 100%;
+  display: grid;
+  gap: 2rem;
+}
+.c-card-container__logo-icons {
+  background-color: var(--Dark-Blue);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.5rem;
+  border-radius: 10px 100px 10px 10px;
+}
+.fylo-logo {
+  width: 10rem;
+}
+.fylo-logo-link {
+  width: fit-content;
+}
+.icons-logo-link {
+  display: flex;
+  gap: 1rem;
+}
+.icons-logo-link img {
+  width: 1.8rem;
+  height: 1.5rem;
+}
+.icons-logo-link button {
+  border: none;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background-color: var(--Very-Dark-Blue);
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+.icons-logo-link button:hover {
+  background-image: var(--Gradient);
+  border-radius: 100%;
+}
+.c-card-container__storage-details {
+  background-color: var(--Dark-Blue);
+  padding: 2rem;
+  border-radius: 10px;
+  position: relative;
+  display: grid;
+  /* gap: 5rem; */
+  width: 100%;
+}
+.storage-details__label-meter {
+  display: grid;
+  gap: 1.5rem;
+}
+label {
+  display: block;
+  text-align: center;
+  color: var(--Pale-Blue);
+}
+label span {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.m-s-r {
+  display: grid;
+  gap: 0;
+}
+.meter {
+  background-color: var(--Very-Dark-Blue);
+  padding: 0.25rem;
+  height: 1.5rem;
+  border-radius: 100px;
+}
+.progress-bar {
+  background-image: var(--Gradient);
+  height: 100%;
+  width: 81.5%;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+.progress-bar::after {
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  background-color: var(--Pale-Blue);
+  position: absolute;
+  display: block;
+  right: 0;
+  border-radius: 100%;
+}
+.storage-range {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  color: var(--Pale-Blue);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.storage-space-left {
+  background-color: white;
+  width: fit-content;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  position: absolute;
+  justify-self: center;
+  bottom: -25%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.span-1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.span-2 {
+  font-weight: 700;
+  color: var(--Grayish-Blue);
+}
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--Grayish-Blue);
+  font-weight: 700;
+}
+.attribution a {
+  color: hsl(0, 90%, 46%);
+}
+@media (min-width: 47.5rem) {
+  body {
+    background-image: url(./images/bg-desktop.png);
+    background-position: bottom;
+    background-size: 100% 50%;
+    grid-template-rows: 1fr;
+  }
+  main {
+    width: min(100%, 65rem);
+  }
+  .c-card-container {
+    display: flex;
+    justify-content: center;
+  }
+  .c-card-container__logo-icons {
+    flex: 2;
+  }
+  .c-card-container__storage-details {
+    flex: 4;
+    align-self: flex-end;
+  }
+  label {
+    text-align: start;
+    align-self: center;
+  }
+  .storage-range {
+    margin: 0;
+  }
+  .storage-space-left {
+    justify-self: end;
+    right: 2rem;
+    top: -40%;
+    bottom: 80%;
+    border-bottom-right-radius: 0;
+  }
+  .storage-space-left::after {
+    content: "";
+    background-color: white;
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    right: 0;
+    bottom: -1.8rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+  }
+}

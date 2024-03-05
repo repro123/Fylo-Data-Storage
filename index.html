@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Fylo data storage component</title>
+  </head>
+  <body>
+    <main>
+      <section class="c-card-container">
+        <h1 class="sr-only">Fylo Data Storage</h1>
+        <div class="c-card-container__logo-icons">
+          <a href="#" aria-label="Fylo-Home-Page" class="fylo-logo-link">
+            <img src="./images/logo.svg" alt="Fylo logo" class="fylo-logo" />
+          </a>
+          <div class="icons-logo-link">
+            <button class="document-logo-link">
+              <img src="./images/icon-document.svg" alt="" aria-hidden="true" />
+              <span class="sr-only">Upload document</span>
+            </button>
+            <button class="folder-logo-link">
+              <img src="./images/icon-folder.svg" alt="" aria-hidden="true" />
+              <span class="sr-only">Upload folder</span>
+            </button>
+            <button class="upload-logo-link">
+              <img src="./images/icon-upload.svg" alt="" aria-hidden="true" />
+              <span class="sr-only">Upload to cloud</span>
+            </button>
+          </div>
+        </div>
+        <div class="c-card-container__storage-details">
+          <div class="storage-details__label-meter">
+            <label for="storage-used"
+              ><q>You’ve used <span>815 GB</span> of your storage</q></label
+            >
+            <meter
+              class="sr-only"
+              id="storage-used"
+              min="0"
+              max="1000"
+              value="815"
+            >
+              815 GB
+            </meter>
+            <div class="m-s-r" aria-hidden="true">
+              <div class="meter" aria-hidden="true">
+                <span class="progress-bar"></span>
+              </div>
+              <p class="storage-range" aria-hidden="true">
+                <span>0 GB</span><span>1000 GB</span>
+              </p>
+            </div>
+          </div>
+          <p class="storage-space-left">
+            <span class="span-1">185</span>
+            <span class="span-2">GB LEFT</span>
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/repro123" target="_blank">Ibrahim Bello</a>.
+      </p>
+    </footer>
+  </body>
+</html>
