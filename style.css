@@ -146,7 +146,7 @@ main {
   width: 1.8rem;
   height: 1.5rem;
 }
-.icons-logo-link button {
+.icons-logo-link .button {
   border: none;
   display: grid;
   place-items: center;
@@ -156,7 +156,7 @@ main {
   height: 3rem;
   cursor: pointer;
 }
-.icons-logo-link button:hover {
+.icons-logo-link .button:hover {
   background-image: var(--Gradient);
   border-radius: 100%;
 }

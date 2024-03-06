@@ -21,23 +21,23 @@
   <body>
     <main>
       <section class="c-card-container">
-        <h1 class="sr-only">Fylo Data Storage</h1>
+        <h1 class="sr-only">Storage summary</h1>
         <div class="c-card-container__logo-icons">
-          <a href="#" aria-label="Fylo-Home-Page" class="fylo-logo-link">
+          <a href="#" aria-label="Fylo Home Page" class="fylo-logo-link">
             <img src="./images/logo.svg" alt="Fylo logo" class="fylo-logo" />
           </a>
           <div class="icons-logo-link">
-            <button class="document-logo-link">
+            <a href="#" class="document-logo-link button">
               <img src="./images/icon-document.svg" alt="" aria-hidden="true" />
-              <span class="sr-only">Upload document</span>
-            </button>
-            <button class="folder-logo-link">
+              <span class="sr-only">View document</span>
+            </a>
+            <a href="#" class="folder-logo-link button">
               <img src="./images/icon-folder.svg" alt="" aria-hidden="true" />
-              <span class="sr-only">Upload folder</span>
-            </button>
-            <button class="upload-logo-link">
+              <span class="sr-only">View folder</span>
+            </a>
+            <button class="upload-logo-link button">
               <img src="./images/icon-upload.svg" alt="" aria-hidden="true" />
-              <span class="sr-only">Upload to cloud</span>
+              <span class="sr-only">Upload file</span>
             </button>
           </div>
         </div>
@@ -53,11 +53,11 @@
               max="1000"
               value="815"
             >
-              815 GB
+              815 GB of 1000 GB
             </meter>
             <div class="m-s-r" aria-hidden="true">
               <div class="meter" aria-hidden="true">
-                <span class="progress-bar"></span>
+                <span class="progress-bar" aria-hidden="true"></span>
               </div>
               <p class="storage-range" aria-hidden="true">
                 <span>0 GB</span><span>1000 GB</span>
